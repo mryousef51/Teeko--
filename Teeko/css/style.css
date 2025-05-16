@@ -1,0 +1,386 @@
+/* CSS for Legendary YouTube Channel Website */
+
+/* --- Color Palette (Fakhama & Attractive/Vibrant) ---
+   Primary Gold Tones: #FFD700 (Gold), #B8860B (DarkGoldenRod), #CFB53B (Old Gold for depth)
+   Deep/Luxurious Base: #121212 (Near Black for extreme luxury), #1A1A2E (Very Dark Blue)
+   Vibrant Accents: #E94560 (Fiery Rose for CTAs), #00E0C6 (Turquoise for highlights)
+   Text Colors: #FFFFFF (White), #EAEAEA (Light Gray), #CCCCCC (Slightly darker gray for less emphasis)
+   Shadows: Subtle dark shadows for depth, e.g., box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+*/
+
+/* --- Font Styles (Fakhama) ---
+   Headings: 'Playfair Display', serif; (Elegant and luxurious)
+   Sub-Headings/Nav: 'Raleway', sans-serif; (Modern and clean)
+   Body Text: 'Cairo', 'Open Sans', sans-serif; (Readable and supports Arabic well)
+*/
+
+body {
+    font-family: 'Cairo', 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000; /* Darker, more luxurious base */
+    color: #EAEAEA;
+    line-height: 1.7;
+    font-size: 16px; /* Base font size */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 25px 20px;
+}
+
+/* --- Header --- */
+header {
+    background-color: rgba(26, 26, 46, 0.85); /* Dark blue with slight transparency */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    padding: 20px 0;
+    border-bottom: 4px solid #ffd700; /* Thicker Gold accent */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo a {
+    color: #a200ff;
+    text-decoration: none;
+    font-size: 2.2em;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 30px;
+}
+
+header nav ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1.15em;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.2s ease-out;
+    padding-bottom: 5px; /* Space for potential underline effect */
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    color: #FFD700;
+    transform: translateY(-2px);
+}
+
+header nav ul li a.active {
+    border-bottom: 2px solid #FFD700;
+}
+
+/* --- Main Content --- */
+main h1 {
+    font-family: 'Playfair Display', serif;
+    color: #FFD700;
+    font-size: 2.8em;
+    text-align: center;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+main > .container > p:first-of-type { /* The intro paragraph in each page */
+    text-align: center;
+    font-size: 1.2em;
+    color: #CCCCCC;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Hero Section (Home Page) --- */
+#hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/placeholder-hero-bg.jpg'); /* Placeholder, user should replace */
+    background-size: cover;
+    background-position: center;
+    color: #FFFFFF;
+    padding: 80px 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+#hero h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+#hero p {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* --- Call to Action Buttons --- */
+.cta-button {
+    display: inline-block;
+    background-color: #E94560; /* Fiery Rose */
+    color: #FFFFFF;
+    padding: 15px 35px;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    border-radius: 50px; /* Pill shape */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(233, 69, 96, 0.4);
+}
+
+.cta-button:hover {
+    background-color: #D43750; /* Darker Fiery Rose */
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 15px rgba(233, 69, 96, 0.6);
+}
+
+.cta-button.youtube-subscribe {
+    background-color: #FF0000; /* YouTube Red */
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.4);
+}
+
+.cta-button.youtube-subscribe:hover {
+    background-color: #CC0000; /* Darker YouTube Red */
+    box-shadow: 0 6px 15px rgba(255, 0, 0, 0.6);
+}
+
+/* --- Tutorial Cards (Home & Tutorials Page) --- */
+#latest-tutorials h2, #tutorials-list h2, .download-category h2 {
+    font-family: 'Playfair Display', serif;
+    color: #CFB53B; /* Old Gold */
+    font-size: 2.2em;
+    margin-bottom: 30px;
+    text-align: center;
+    border-bottom: 2px solid #CFB53B;
+    padding-bottom: 10px;
+    display: inline-block; /* To make border only as wide as text */
+}
+
+.tutorial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.tutorial-card, .tutorial-item {
+    background-color: #1A1A2E; /* Dark Blue Card Background */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.tutorial-card:hover, .tutorial-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.tutorial-card img, .tutorial-item img {
+    width: 100%;
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Crop images to fit */
+    border-bottom: 3px solid #FFD700;
+}
+
+.tutorial-card h3, .tutorial-item h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    color: #FFD700;
+    font-size: 1.5em;
+    padding: 15px 20px 10px;
+    margin: 0;
+}
+
+.tutorial-item h2 { /* For the list view on tutorials.html */
+    font-size: 1.8em;
+}
+
+.tutorial-card p, .tutorial-item p {
+    padding: 0 20px 15px;
+    color: #CCCCCC;
+    font-size: 1em;
+    flex-grow: 1; /* Allows description to take available space */
+}
+
+.tutorial-meta {
+    font-size: 0.9em !important;
+    color: #B8860B !important; /* DarkGoldenRod for meta */
+    padding-bottom: 10px !important;
+}
+
+.read-more {
+    display: inline-block;
+    background-color: #B8860B; /* DarkGoldenRod */
+    color: #FFFFFF;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    border-radius: 0 0 10px 10px; /* Rounded bottom corners if button is at bottom */
+    text-align: center;
+    margin: 20px; /* If not full width */
+    align-self: flex-start; /* Align to start if not full width */
+    border-radius: 20px; /* Pill shape */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.read-more:hover {
+    background-color: #FFD700; /* Gold */
+    color: #121212;
+    transform: scale(1.05);
+}
+
+/* --- Downloads Page --- */
+.download-category {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #1A1A2E;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.download-category h2 {
+    text-align: left;
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.download-item {
+    display: flex;
+    align-items: center;
+    background-color: #2C3E50; /* Slightly lighter for item background */
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.download-item:hover {
+    transform: translateX(5px) scale(1.02);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.download-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px; /* In RTL, this will be to the left */
+    object-fit: contain;
+}
+
+.download-info {
+    flex-grow: 1;
+}
+
+.download-info h3 {
+    font-family: 'Raleway', sans-serif;
+    color: #FFD700;
+    margin: 0 0 5px 0;
+    font-size: 1.3em;
+}
+
+.download-info p {
+    color: #CCCCCC;
+    margin: 0;
+    font-size: 0.95em;
+}
+
+.download-button {
+    background-color: #00E0C6; /* Turquoise accent */
+    color: #121212;
+    padding: 10px 25px;
+    font-size: 1em;
+    margin-left: 15px; /* Space from info in RTL */
+}
+
+.download-button:hover {
+    background-color: #00B3A0; /* Darker Turquoise */
+    box-shadow: 0 6px 15px rgba(0, 224, 198, 0.5);
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #1A1A2E; /* Consistent with card/section backgrounds */
+    color: #B0B0B0;
+    text-align: center;
+    padding: 30px 0;
+    border-top: 4px solid #FFD700;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.95em;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Responsive Adjustments (Basic Examples) */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    header nav ul {
+        margin-top: 15px;
+        justify-content: center;
+    }
+    header nav ul li {
+        margin: 0 10px;
+    }
+    main h1 {
+        font-size: 2.2em;
+    }
+    #hero h2 {
+        font-size: 2.5em;
+    }
+    #hero p {
+        font-size: 1.1em;
+    }
+    .cta-button {
+        padding: 12px 25px;
+        font-size: 1.1em;
+    }
+    .tutorial-grid {
+        grid-template-columns: 1fr; /* Stack cards on smaller screens */
+    }
+    .download-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .download-icon {
+        margin-bottom: 10px;
+    }
+    .download-button {
+        margin-top: 10px;
+        align-self: flex-start;
+        margin-left: 0;
+    }
+}
+
